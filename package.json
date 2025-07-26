@@ -1,0 +1,33 @@
+{
+  "name": "terralithic-website",
+  "version": "1.0.0",
+  "description": "Terralithic Gaming Studio - Rush Roulette Official Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "start": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'Build completed - Static files ready for deployment'",
+    "preview": "live-server --port=8080 --open=/index.html"
+  },
+  "keywords": [
+    "gaming",
+    "website",
+    "vue",
+    "terralithic",
+    "rush-roulette"
+  ],
+  "author": "Terralithic Studio",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terralithic/website.git"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

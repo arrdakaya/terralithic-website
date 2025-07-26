@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Terralithic</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Cinzel:wght@400;600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="particle-container">
+                <div v-for="particle in particles" :key="particle.id" class="particle" :style="particle.style"></div>
+            </div>
+
+            <nav class="main-nav">
+                <div class="nav-content">
+                    <div class="logo">
+                        <img src="terralithiclogo.png" alt="Rush Roulette Game Cover" class="terralithic-logo">
+                        <span class="logo-text">TERRALITHIC</span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#hero" @click="scrollToSection('hero')">Home</a></li>
+                        <li><a href="#game" @click="scrollToSection('game')">Game</a></li>
+                        <li><a href="#trailer" @click="scrollToSection('trailer')">Trailer</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main>
+                <section id="hero" class="hero-section">
+                    <div class="ritual-chamber">
+                        <div class="chamber-floor">
+                            <div class="rune-circle">
+                                <div class="rune rune-1">᚛</div>
+                                <div class="rune rune-2">᚜</div>
+                                <div class="rune rune-3">ᚐ</div>
+                                <div class="rune rune-4">ᚑ</div>
+                                <div class="rune rune-5">ᚒ</div>
+                                <div class="rune rune-6">ᚓ</div>
+                            </div>
+                        </div>
+
+                        <div class="players-circle">
+                            <div v-for="(player, index) in players" :key="index"
+                                :class="['player', `player-${index + 1}`, { chosen: chosenPlayer === index }]">
+                                <img :src="chosenPlayer === index ? 'characters/hunterHead.png' : playerImages[index]"
+                                    :alt="`Player ${index + 1}`" class="player-heads" />
+                                <div v-if="chosenPlayer === index" class="crimson-light"></div>
+                            </div>
+                        </div>
+
+                        <div class="central-artifact">
+                            <div class="floating-mask" :style="{ transform: `rotate(${maskRotation}deg)` }">
+                                <!-- <div class="mask-inner">
+                                    <div class="mask-eyes">
+                                        <div class="eye left-eye" :class="{ glowing: isSelecting }"></div>
+                                        <div class="eye right-eye" :class="{ glowing: isSelecting }"></div>
+                                    </div>
+                                    <div class="mask-symbol">◊</div>
+                                </div> -->
+
+                                <img src="characters/MonsterHead.png" alt="Rush Roulette Game Cover"
+                                    class="monster-head">
+                                <div class="mask-glow" :class="{ active: isSelecting }"></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-content">
+                        <div class="glass-panel hero-panel">
+                            <h1 class="game-title">
+                                <span class="title-main">RUSH</span>
+                                <span class="title-sub">ROULETTE</span>
+                            </h1>
+                            <div class="hero-actions">
+                                <button class="btn-primary" @click="enterRitual">Wishlist Now!</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="trailer" class="lore-section">
+                    <div class="lore-trailer">
+                        <h3>Uncover the Origins</h3>
+                        <video class="trailer-video" src="RushRouletteTrailer.mp4" controls autoplay muted playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                </section>
+                <section id="game" class="game-section">
+                    <div class="section-content">
+                        <div class="glass-panel content-panel">
+                            <h2 class="section-title">Rush Roulette</h2>
+                            <div class="game-info">
+                                <div class="game-description">
+                                    <h3>Masked Hunter-Chaser Mechanics</h3>
+                                    <p>A group of young thrill-seekers enters a cursed village. One is bound by a cursed
+                                        mask and must tag another to break free. Each time the curse shifts, players
+                                        choose a random ability card. Run, deceive, survive — or be claimed by the
+                                        monster hunting the cursed</p>
+                                    <ul class="feature-list">
+                                        <li>Asymmetric multiplayer horror</li>
+                                        <li>Dynamic role selection</li>
+                                        <li>Procedural ritual chambers</li>
+                                        <li>Mystical artifacts and abilities</li>
+                                    </ul>
+                                </div>
+                                <div class="game-preview">
+                                    <div class="preview-container">
+                                        <img src="rush-roulette-cover.png" alt="Rush Roulette Gameplay"
+                                            style="width: 100%; border-radius: 16px; box-shadow: 0 0 30px rgba(37, 99, 235, 0.3);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+            </main>
+            <footer class="main-footer">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-text">TERRALITHIC</span>
+                        <span class="footer-tagline">Crafting Digital Nightmares</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="https://www.instagram.com/rushroulettegame?igsh=aXBjY2xkcnV3NDlp&utm_source=qr"
+                            target="_blank" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@rushroulettegame" target="_blank" class="social-icon tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="mailto:info@terralithic.com" class="social-icon email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-runes">
+                    <span>᚛ ᚐ ᚑ ᚒ ᚓ ᚜</span>
+                </div>
+            </footer>
+
+            <!-- Application Modal -->
+            <div v-if="showModal" class="application-modal" @click="closeModal">
+                <div class="modal-content" @click.stop>
+                    <div v-if="!applicationSubmitted">
+                        <h3>Application Portal</h3>
+                        <p>You wish to join our {{ selectedRole }} ranks? The ritual demands commitment.</p>
+                        <div class="form-group">
+                            <input v-model="applicationForm.email" type="email" placeholder="Your email..." />
+                            <textarea v-model="applicationForm.message"
+                                placeholder="Tell us of your dark talents..."></textarea>
+                        </div>
+                        <div class="modal-actions">
+                            <button class="submit-application" @click="submitApplication">Submit Application</button>
+                            <button class="close-modal" @click="closeModal">Retreat</button>
+                        </div>
+                    </div>
+                    <div v-else>
+                        <h3>Submission Received</h3>
+                        <p>Your application has been cast into the void. The council will deliberate.</p>
+                        <button class="close-modal" @click="closeModal">Return to Realm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+
+</html>
