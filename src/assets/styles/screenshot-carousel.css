@@ -79,6 +79,7 @@
 }
 
 .screenshot-description {
+  font-family: 'BM Euljiro', sans-serif;
   font-size: 1.1rem;
   color: var(--frost-white);
   line-height: 1.5;
@@ -631,6 +632,7 @@
 }
 
 .trailer-subtitle {
+  font-family: 'BM Euljiro', sans-serif;
   font-size: 1.2rem;
   color: var(--snow-gray);
   line-height: 1.6;
