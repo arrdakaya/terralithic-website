@@ -2,13 +2,21 @@
   <nav class="main-nav">
     <div class="nav-content">
       <div class="logo">
-        <img src="/terralithiclogo.png" alt="Terralithic Logo" class="terralithic-logo">
+        <img
+          src="/terralithiclogo.png"
+          alt="Terralithic Logo"
+          class="terralithic-logo"
+        />
         <span class="logo-text">TERRALITHIC</span>
       </div>
       <ul class="nav-links">
         <li><a href="#hero" @click="scrollToSection('hero')">Home</a></li>
-        <li><a href="#trailer" @click="scrollToSection('trailer')">Trailer</a></li>
-        <li><a href="#game" @click="scrollToSection('game')">Game</a></li>
+        <li>
+          <a href="#trailer" @click="scrollToSection('trailer')">Trailer</a>
+        </li>
+        <li>
+          <a href="#features" @click="scrollToSection('features')">Features</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -24,10 +32,10 @@ export default {
         const offsetTop = element.offsetTop - 80
         window.scrollTo({
           top: offsetTop,
-          behavior: 'smooth'
+          behavior: 'smooth',
         })
       }
-    }
-  }
+    },
+  },
 }
 </script>
