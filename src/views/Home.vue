@@ -223,7 +223,7 @@ export default {
     const gameScreenshots = reactive([
       {
         id: 1,
-        src: 'src/assets/images/1.png',
+        src: '/screenshots/1.png',
         alt: 'Rush Roulette Ritual Chamber',
         title: 'The Ritual Chamber',
         description:
@@ -233,37 +233,39 @@ export default {
       },
       {
         id: 2,
-        src: 'src/assets/images/HunterCatch.jpg',
-        alt: 'Character Abilities',
-        title: 'Unique Abilities',
+        src: '/screenshots/HunterCatch.jpg',
+        alt: 'Hunt or Hide',
+        title: 'Hunt or Hide',
         description:
-          'Each player possesses distinct skills and ability cards to survive the nightmare',
+          'Will you be the hunter seeking victims, or will you hide in the shadows?',
+
         gameInfo:
           'Strategic gameplay meets psychological horror in this asymmetric multiplayer experience',
       },
       {
         id: 3,
-        src: 'src/assets/images/2.png',
-        alt: 'Hunt or Hide',
-        title: 'Hunt or Hide',
-        description:
-          'Will you be the hunter seeking victims, or will you hide in the shadows?',
-        gameInfo:
-          'Dynamic role-switching keeps every match unpredictable and terrifying',
-      },
-      {
-        id: 4,
-        src: 'src/assets/images/Cards.png',
+        src: '/screenshots/2.png',
         alt: 'Team Strategy',
         title: 'Teamwork & Betrayal',
         description:
           'Trust no one - your allies might become your greatest threat',
         gameInfo:
+          'Dynamic role-switching keeps every match unpredictable and terrifying',
+      },
+      {
+        id: 4,
+        src: '/screenshots/Cards.png',
+        alt: 'Character Abilities',
+        title: 'Unique Abilities',
+        description:
+          'Each player possesses distinct skills and ability cards to survive the nightmare',
+
+        gameInfo:
           'Psychological warfare meets survival horror in this intense 4-8 player experience',
       },
       {
         id: 5,
-        src: 'src/assets/images/City.png',
+        src: '/screenshots/CursedPerspective.png',
         alt: 'Mystical Environment',
         title: 'Cursed Environments',
         description:
