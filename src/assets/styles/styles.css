@@ -16,14 +16,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'BM Euljiro';
-    src: url('@/assets/fonts/bm-euljiro.otf') format('otf ');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
     font-family: 'BM Euljiro', sans-serif;
     background: linear-gradient(135deg, var(--ritual-black) 0%, #0F172A 50%, #1E293B 100%);
