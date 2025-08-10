@@ -233,7 +233,7 @@ export default {
       },
       {
         id: 2,
-        src: '/screenshots/HunterCatch.jpg',
+        src: '/screenshots/2.png',
         alt: 'Hunt or Hide',
         title: 'Hunt or Hide',
         description:
@@ -244,7 +244,7 @@ export default {
       },
       {
         id: 3,
-        src: '/screenshots/2.png',
+        src: '/screenshots/3.png',
         alt: 'Team Strategy',
         title: 'Teamwork & Betrayal',
         description:
@@ -254,7 +254,7 @@ export default {
       },
       {
         id: 4,
-        src: '/screenshots/Cards.png',
+        src: '/screenshots/4.png',
         alt: 'Character Abilities',
         title: 'Unique Abilities',
         description:
@@ -265,11 +265,10 @@ export default {
       },
       {
         id: 5,
-        src: '/screenshots/CursedPerspective.png',
+        src: '/screenshots/5.png',
         alt: 'Mystical Environment',
-        title: 'Cursed Environments',
-        description:
-          'Navigate through procedurally generated chambers filled with ancient mysteries',
+        title: 'Escape',
+        description: 'Collect relics and escape from curse',
         gameInfo:
           'Every match offers new challenges with randomly generated ritual chambers',
       },
