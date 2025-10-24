@@ -191,10 +191,16 @@
           </div>
         </div>
         <div>
+          <h2 class="section-title">
+            <span class="title-decoration">◊</span>
+            Reviews
+            <span class="title-decoration">◊</span>
+          </h2>
           <a
             href="https://gamesardor.net/top-steam-games-to-look-out-for-in-october-2025/#rush-roulette"
-            color="white"
-            >Top Steam Games to Look Out for in October 2025 - Gamesardor</a
+            target="_blank"
+            class="custom-link"
+            >● Top Steam Games to Look Out for in October 2025 - Gamesardor</a
           >
         </div>
 
@@ -685,4 +691,18 @@ export default {
 @import '../assets/styles/home-enhancements.css';
 @import '../assets/styles/home-redesign.css';
 @import '../assets/styles/screenshot-carousel.css';
+.custom-link {
+  color: white; /* Normal renk */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  transition: color 0.2s; /* Hover geçiş efekti */
+}
+
+.custom-link:hover {
+  color: #00b4ff; /* Hover rengi */
+  text-decoration: none; /* Hover'da da çizgi olmasın */
+}
+.custom-link:visited {
+  color: white;
+  text-decoration: none;
+}
 </style>
