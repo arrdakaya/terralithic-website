@@ -190,6 +190,13 @@
             <p class="feature-description">{{ feature.description }}</p>
           </div>
         </div>
+        <div>
+          <a
+            href="https://gamesardor.net/top-steam-games-to-look-out-for-in-october-2025/#rush-roulette"
+            color="white"
+            >Top Steam Games to Look Out for in October 2025 - Gamesardor</a
+          >
+        </div>
 
         <!-- Final Conversion CTA -->
       </div>
