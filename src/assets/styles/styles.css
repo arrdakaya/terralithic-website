@@ -28,6 +28,72 @@ html {
     scroll-behavior: smooth;
 }
 
+.release-date-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background: linear-gradient(135deg, var(--ice-blue) 0%, var(--deep-blue) 100%);
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.5);
+    animation: banner-pulse 3s ease-in-out infinite;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.banner-text {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.1rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner-text strong {
+    font-weight: 900;
+    color: var(--frost-white);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.banner-icon {
+    font-size: 1.5rem;
+    animation: icon-bounce 2s ease-in-out infinite;
+}
+
+.banner-icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    animation: icon-bounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.6));
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+@keyframes banner-pulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.5);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 99, 235, 0.8), 0 0 40px rgba(37, 99, 235, 0.4);
+    }
+}
+
+@keyframes icon-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
 .particle-container {
     position: fixed;
     top: 0;
@@ -40,7 +106,7 @@ html {
 
 .main-nav {
     position: fixed;
-    top: 0;
+    top: 3.5rem;
     width: 100%;
     z-index: 1000;
     background: rgba(10, 10, 10, 0.9);
@@ -868,6 +934,28 @@ html {
 }
 
 @media (max-width: 768px) {
+    .release-date-banner {
+        padding: 0.6rem 0;
+    }
+
+    .banner-text {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .banner-icon {
+        font-size: 1.2rem;
+    }
+
+    .banner-icon-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .main-nav {
+        top: 3rem;
+    }
+
     .nav-content {
         flex-direction: column;
         gap: 1rem;
@@ -921,6 +1009,32 @@ html {
 }
 
 @media (max-width: 480px) {
+    .release-date-banner {
+        padding: 0.5rem 0;
+    }
+
+    .banner-text {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+
+    .banner-icon {
+        font-size: 1rem;
+    }
+
+    .banner-icon-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .banner-content {
+        gap: 0.5rem;
+    }
+
+    .main-nav {
+        top: 2.5rem;
+    }
+
     .ritual-chamber {
         width: 300px;
         height: 300px;
