@@ -82,10 +82,10 @@
               <span class="title-roulette">ROULETTE</span>
             </h1>
             <p class="game-tagline">
-              A group of young thrill-seekers enters a cursed village. One is
-              bound by a cursed mask and must tag another to break free. Each
-              time the curse shifts, players choose a random ability card. Run,
-              deceive, survive — or be claimed by the monster hunting the cursed
+              A village trapped in fear and snow. Leap and climb across rooftops
+              to avoid danger. When the curse shifts, choose a powerful ability
+              card to turn the tide. Avoid the monster and collect three relics
+              to escape in this intense asymmetric multiplayer battle.
             </p>
           </div>
 
