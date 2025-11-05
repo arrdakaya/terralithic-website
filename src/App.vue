@@ -13,7 +13,6 @@ import ParticleSystem from './components/ParticleSystem.vue'
 import Navigation from './components/Navigation.vue'
 import Footer from './components/Footer.vue'
 import ApplicationModal from './components/ApplicationModal.vue'
-import { Analytics } from '@vercel/analytics/next'
 export default {
   name: 'App',
   components: {
@@ -21,7 +20,6 @@ export default {
     Navigation,
     Footer,
     ApplicationModal,
-    Analytics,
   },
 }
 </script>
