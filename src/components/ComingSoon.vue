@@ -412,13 +412,27 @@ export default {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .date-box {
-    padding: 1rem 2rem;
-    gap: 0.5rem;
+  .coming-soon-title {
+    font-size: clamp(3rem, 10vw, 5rem);
+    gap: 0.2rem;
   }
 
-  .coming-soon-title {
-    gap: 0.2rem;
+  .date-box {
+    padding: 1rem 1.5rem;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .date-number {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .date-text {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .date-separator {
+    font-size: 1.5rem;
   }
 
   .steam-wishlist-btn {
@@ -432,6 +446,83 @@ export default {
 
   .btn-text {
     font-size: 1rem;
+    letter-spacing: 0.1em;
+  }
+
+  .scroll-indicator {
+    gap: 0.8rem;
+  }
+
+  .scroll-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .scroll-arrow i {
+    font-size: 1.2rem;
+  }
+
+  .scroll-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon-title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .date-container {
+    margin-bottom: 2rem;
+  }
+
+  .date-box {
+    padding: 0.8rem 1.2rem;
+    gap: 0.5rem;
+  }
+
+  .date-number {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+  }
+
+  .date-text {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    letter-spacing: 0.15em;
+  }
+
+  .date-separator {
+    font-size: 1.2rem;
+  }
+
+  .steam-link-container {
+    margin-bottom: 2rem;
+  }
+
+  .steam-wishlist-btn {
+    padding: 0.9rem 1.5rem;
+    gap: 0.6rem;
+  }
+
+  .steam-logo {
+    height: 22px;
+  }
+
+  .btn-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+  }
+
+  .scroll-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .scroll-arrow i {
+    font-size: 1rem;
+  }
+
+  .scroll-text {
+    font-size: 0.75rem;
   }
 }
 </style>
