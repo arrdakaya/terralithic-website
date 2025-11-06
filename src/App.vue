@@ -1,21 +1,26 @@
 <template>
   <div id="app">
-    <div class="release-date-banner">
-      <div class="banner-content">
-        <img :src="currentLeftImage" alt="Character" class="banner-icon-img" />
-        <span class="banner-text"><strong>20 • NOVEMBER • 2025</strong></span>
-        <img :src="currentRightImage" alt="Character" class="banner-icon-img" />
+    <ComingSoon v-if="showComingSoon" @scrolled="hideComingSoon" />
+
+    <div v-show="!showComingSoon" class="main-content">
+      <div class="release-date-banner">
+        <div class="banner-content">
+          <img :src="currentLeftImage" alt="Character" class="banner-icon-img" />
+          <span class="banner-text"><strong>20 • NOVEMBER • 2025</strong></span>
+          <img :src="currentRightImage" alt="Character" class="banner-icon-img" />
+        </div>
       </div>
+      <ParticleSystem />
+      <Navigation />
+      <router-view />
+      <Footer />
+      <ApplicationModal />
     </div>
-    <ParticleSystem />
-    <Navigation />
-    <router-view />
-    <Footer />
-    <ApplicationModal />
   </div>
 </template>
 
 <script>
+import ComingSoon from './components/ComingSoon.vue'
 import ParticleSystem from './components/ParticleSystem.vue'
 import Navigation from './components/Navigation.vue'
 import Footer from './components/Footer.vue'
@@ -29,6 +34,7 @@ import JaneCircle from './assets/images/JaneCircle.png'
 export default {
   name: 'App',
   components: {
+    ComingSoon,
     ParticleSystem,
     Navigation,
     Footer,
@@ -36,6 +42,7 @@ export default {
   },
   data() {
     return {
+      showComingSoon: true,
       images: [
         HunterCircle,
         JenniferCircle,
@@ -54,6 +61,12 @@ export default {
     currentRightImage() {
       return this.images[this.currentRightIndex]
     },
+  },
+  methods: {
+    hideComingSoon() {
+      this.showComingSoon = false
+      document.body.style.overflow = ''
+    }
   },
   mounted() {
     // Sol taraftaki görseli her 3 saniyede bir değiştir
