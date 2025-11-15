@@ -197,6 +197,13 @@
             <span class="title-decoration">◊</span>
           </h2>
           <a
+            href="https://www.youtube.com/watch?v=n9p_4fBMtLI&t=771s"
+            target="_blank"
+            class="custom-link"
+            >● Youtube Review: Developing Online Game as a Team</a
+          >
+          <br />
+          <a
             href="https://gamesardor.net/top-steam-games-to-look-out-for-in-october-2025/#rush-roulette"
             target="_blank"
             class="custom-link"
